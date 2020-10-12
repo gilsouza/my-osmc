@@ -9,6 +9,6 @@ cd couchpotato
 ./install_couchpotato.sh
 cd .. 
 
-cd sickchill
-./install_sickchill.sh
-cd ..
+#cd sickchill
+#./install_sickchill.sh
+#cd ..

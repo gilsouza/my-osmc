@@ -8,6 +8,6 @@ sudo useradd –G osmc gabi
 sudo smbpasswd -a gil
 sudo smbpasswd -a gabi
 
-cp smb-shares.conf /etc/samba/smb-shares.conf
+sudo cp smb-shares.conf /etc/samba/smb-shares.conf
 
 sudo service smbd restart

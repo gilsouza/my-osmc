@@ -4,7 +4,11 @@ cd basic
 ./setup_basic.sh
 cd ..
 
-./install_dependencies.sh
+#./install_dependencies.sh
+
+cd samba
+./config_samba.sh
+cd ..
 
 cd transmission
 ./configure_transmission.sh

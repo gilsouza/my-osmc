@@ -1,7 +1,10 @@
 #!/bin/bash
 
-sudo useradd –G osmc gil
-sudo useradd –G osmc gabi
+
+sudo useradd gil
+sudo usermod -a -G osmc gil
+sudo useradd gabi
+sudo usermod -a -G osmc gabi
 sudo smbpasswd -a gil
 sudo smbpasswd -a gabi
 

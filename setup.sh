@@ -2,9 +2,8 @@
 
 cd basic
 ./setup_basic.sh
+./install_dependencies.sh
 cd ..
-
-#./install_dependencies.sh
 
 cd samba
 ./config_samba.sh

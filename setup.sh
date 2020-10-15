@@ -13,10 +13,10 @@ cd transmission
 ./configure_transmission.sh
 cd ..
 
-#cd couchpotato
-#./install_couchpotato.sh
-#cd .. 
+cd couchpotato
+./install_couchpotato.sh
+cd .. 
 
-#cd sickchill
-#./install_sickchill.sh
-#cd ..
+cd sickrage
+./install_sickrage.sh
+cd ..

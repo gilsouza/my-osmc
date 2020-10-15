@@ -12,7 +12,7 @@ tar -zxvf Jackett.Binaries.Mono.tar.gz
 mv Jackett /home/osmc/Install/jackett
 
 #setup the service
-sudo cp init.osmc /etc/init.d/jackett
+sudo cp jackett.init /etc/init.d/jackett
 sudo chmod +x /etc/init.d/jackett
 sudo update-rc.d jackett defaults
 

@@ -1,20 +1,30 @@
 
 #!/bin/bash
 
+MEDIA_STORAGE=$1
+
 mkdir /mnt/drive
-#montar drive em /mnt/drive/
+
+if ! grep -q 'init-drive' /etc/fstab ; then
+    echo '# init-drive' >> /etc/fstab
+    echo 'UUID=$MEDIA_STORAGE	/mnt/drive	auto	rw,user,auto	0	0' >> /etc/fstab
+fi
+
+sudo mount -U $MEDIA_STORAGE /mnt/drive
 
 current_dir=$(pwd)
 cd /home/osmc
 
-ln -s /mnt/drive/SMB .
+#remove original folders
 rm -rf Movies
-ln -s /mnt/drive/Movies/ .
 rm -rf Music
+rm -rf Pictures
+rm -rf TV\ Shows
+
+ln -s /mnt/drive/SMB .
+ln -s /mnt/drive/Movies/ .
 ln -s /mnt/drive/Music/ .
-rm -rf Pictures/
 ln -s /mnt/drive/Pictures/ .
-rm -rf TV\ Shows/
 ln -s /mnt/drive/TV\ Shows/ .
 
 sudo chown -R osmc:osmc /mnt/drive/Movies/ /mnt/drive/Music/ /mnt/drive/Pictures/ /mnt/drive/TV\ Shows/

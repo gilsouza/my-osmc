@@ -1,7 +1,6 @@
   
 #!/bin/bash
 
-mkdir /home/osmc/Downloads/
 sudo service transmission stop
 cp transmission_settings.json /home/osmc/.config/transmission-daemon/settings.json
 cp torrent-done.sh /home/osmc/Downloads/torrent-done.sh

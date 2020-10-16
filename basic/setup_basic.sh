@@ -19,4 +19,4 @@ ln -s /mnt/drive/Downloads/ .
 
 sudo chown -R osmc:osmc /mnt/drive/Movies/ /mnt/drive/Music/ /mnt/drive/Pictures/ /mnt/drive/TV\ Shows/ /mnt/drive/Downloads
 
-cd current_dir
+cd $current_dir

@@ -1,7 +1,25 @@
-
+	
 #!/bin/bash
 
+function usage
+{
+    echo "Description: Setup the OSMC"
+    echo "Usage: setup.sh <media storage path>"
+}
+
+function fail
+{
+    echo ""
+    echo "=> $1" 1>&2
+    echo ""
+    usage
+    echo ""
+    exit 1
+}
+
 MEDIA_STORAGE=$1
+
+[ -n "$MEDIA_STORAGE" ] || fail "No media storage path provided"
 
 mkdir /mnt/drive
 
